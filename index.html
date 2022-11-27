@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload="loadApp()">
+
+    <header>
+        <div class="container-mount">
+            <h2 class="white">Presupuesto Disponible</h2>
+            <h2 id="presupuesto" class="title-mount">$2,300.00</h2>
+            <div class="box-info white">
+                <h2 class="title-ppal">INGRESOS</h2>
+                <h3 class="mount-in" id="mount-ingreso">$3600.00</h3>
+            </div>
+            <div class="box-info boxred white">
+                <h2 class="title-ppal">EGRESOS</h2>
+                <div class="egreso-details">
+                    <h3 class="mount-eg" id="mount-egreso">$3600.00</h3>
+                    <h4 class="porcen" id="porcentaje-relation" class="porcentaje"></h4>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+
+        <!-- PANEL IN INFO -->
+        <div class="add-moving">
+            <select name="" id="select-opt">
+                <option value="+">+</option>
+                <option value="-">-</option>
+            </select>
+            <input id="textDetails" class="inputin" type="text" placeholder="Ingrese Detalle">
+            <input id="textMount" class="inputin" type="number" placeholder="Monto">
+            <button id="add-element" class="btn" type="button" onclick="addElement()">
+                <i class='bx bxs-message-alt-add'></i>
+            </button>
+        </div>
+
+        <!-- CONTAINER ALL HISTORY -->
+        <div class="container-history">
+
+            <article class="history-in">
+                <h2 class="title-up green">INGRESOS</h2>
+                <div class="element-in">
+                    <ul id="list-in" class="list-in">
+                        <!-- ELEMENTS INGRESO HERE -->
+                    </ul>
+                </div>
+            </article>
+                
+            <article class="history-eg">
+                <h2 class="title-up orange">EGRESO</h2>
+                <div class="element-eg">
+                    <ul id="list-eg" class="list-eg">
+                        <!-- ELEMENTS EGRESO HERE -->
+                    </ul>
+                </div>
+            </article>
+                
+        </div>
+        
+    </section>
+    <script src="./src/js/dato.class.js"></script>
+    <script src="./src/js/ingreso.js"></script>
+    <script src="./src/js/egreso.js"></script>
+    <script src="./src/js/app.js"></script>
+</body>
+</html>
